@@ -1,0 +1,156 @@
+h1{
+    color: darkgreen;
+    float: left;
+    font-family: "monospace", serif;
+}
+
+.clear{
+    clear: both;
+}
+canvas {
+    border: 1px solid black;
+    margin-left:  50px;
+    float: left;
+}
+ .button {
+     border: none;
+     color: white;
+     font-family: 'QuickSand', sans-serif;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     transition-duration: 0.4s;
+     cursor: pointer;
+     border-radius: 12px;
+ }
+
+.buttonchords {
+    background-color: white;
+    color: black;
+    border: 2px solid #D1C0A8;
+    padding: 50px;
+    margin: 50px 50px;
+    font-size: 16px;
+}
+
+.buttonchords:hover {
+    background-color: #D1C0A8;
+    color: white;
+    padding: 50px;
+    margin: 50px 50px;
+    font-size: 16px;
+}
+
+.containermain {
+    height: 750px;
+    width: 1350px;
+    position: relative;
+    float: left;
+    border-left: 5px solid darkgreen;
+    margin: 35px 1px;
+}
+
+.centersolo {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.buttonmenu {
+    background-color: white;
+    color: black;
+    border: 2px solid #000000;
+    padding: 5px 20px;
+    margin: 5px 5px;
+    font-size: 16px;
+
+}
+
+.buttonmenu:hover {
+    background-color: #000000;
+    color: white;
+    padding: 5px 20px;
+    margin: 5px 5px;
+    font-size: 16px;
+}
+
+.containermenu {
+    width: 300px;
+    position: relative;
+    float: left;
+    margin: 35px 1px;
+
+}
+
+.centertop {
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.centerbottom {
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+img {
+    float: left;
+}
+
+.image-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 50px;
+}
+
+.buttonoverimage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    z-index: 2;
+    background-color: #555;
+    color: #fff;
+    padding: 5px 10px;
+}
+.buttonoverimage:hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    z-index: 2;
+    background-color: #000000;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.container-cancion {
+    position: relative;
+    float: left;
+    margin: 1px 20px;
+
+}
+.container-cancion2 {
+    width: 1400px;
+    position: relative;
+    float: left;
+    margin: 35px 1px;
+    border-left: 5px solid darkgreen;
+}
+pre {
+    font-family: 'QuickSand', sans-serif;
+}
