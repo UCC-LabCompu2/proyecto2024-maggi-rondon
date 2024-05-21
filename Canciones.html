@@ -13,10 +13,10 @@
 <body>
 <header>
   <container class="containertitle">
-    <img src="imagenes/icono.png" alt="logo guitarra"  height="70%" >
-    <h1> El Flaco y la Viola</h1>
-    <canvas id="canvas" width="300%" height="100"></canvas>
-</container>
+      <img src="imagenes/icono.png" alt="logo guitarra"  height="70%" >
+      <h1> El Flaco y la Viola</h1>
+      <canvas id="canvas" width="300%" height="100"></canvas>
+  </container>
 </header>
 <div class="clear"></div>
 <aside>
@@ -30,7 +30,24 @@
       <div>
         <a href="Canciones.html" class="button buttonmenu">Canciones</a>
       </div>
-    </div>
+      <div>
+          <select class="button buttonmenu">
+              <option value="" disabled selected>seleccione un genero</option>
+              <option value="rock">Rock</option>
+              <option value="pop">Pop</option>
+              <option value="reggae">Reggae</option>
+          </select>
+      </div>
+      <input type="text" class="button buttonmenu" placeholder="buscar artista" maxlenght="25" size="20">
+      <div>
+          <select class="button buttonmenu">
+              <option value="" disabled selected>seleccione una cancion</option>
+              <option value="rock">Fanky</option>
+              <option value="pop">Supersonic</option>
+              <option value="reggae">Cyclone</option>
+          </select>
+      </div>
+  </div>
 </aside>
 <section>
   <div class="containermain">
