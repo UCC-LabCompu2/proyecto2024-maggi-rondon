@@ -126,12 +126,29 @@ img {
     float: left;
 }
 
-.image-container {
+.image-container-cyclone {
     position: relative;
     width: 100px;
     height: 100px;
     float: left;
     margin: 50px;
+    display:block;
+}
+.image-container-fanky {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 50px;
+    display: block;
+}
+.image-container-supersonic {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 50px;
+    display: block;
 }
 
 .buttonoverimage {

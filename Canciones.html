@@ -9,6 +9,7 @@
     <meta content="Guitarra, Acordes, Canciones,Musica,Genero,Artistas,Albumes" name="keywords">
     <link rel="stylesheet" href="mystyle.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="imagenes/icono.png">
+    <script type="text/javascript" src="misfunciones.js"></script>
 </head>
 <body>
 <header>
@@ -31,23 +32,23 @@
             <a href="Canciones.html" class="button buttonmenu">Canciones</a>
         </div>
         <div>
-            <label for="genero">genero</label>
-            <select class="button buttonmenu" id="genero">
-                <option value="" disabled selected>seleccione un genero</option>
+            <label for="genero">género</label>
+            <select class="button buttonmenu" id="genero" onchange="mostrargenero(this.value)">
+                <option value="" disabled selected>seleccione un género</option>
                 <option value="rock">Rock</option>
                 <option value="pop">Pop</option>
                 <option value="reggae">Reggae</option>
             </select>
         </div>
         <label for="artista">artista</label>
-        <input type="text" id="artista" class="button buttonmenu" placeholder="buscar artista" maxlength="20" size="20">
+        <input type="text" id="artista" class="button buttonmenu" placeholder="buscar artista" maxlength="20" size="20" onchange="mostrarartista(this.value)" >
         <div>
-            <label for="cancion">cancion</label>
-            <select class="button buttonmenu" id="cancion">
-                <option value="" disabled selected>seleccione una cancion</option>
-                <option value="rock">Fanky</option>
-                <option value="pop">Supersonic</option>
-                <option value="reggae">Cyclone</option>
+            <label for="cancion">canción</label>
+            <select class="button buttonmenu" id="cancion" onchange="mostrarcancion(this.value)">
+                <option value="" disabled selected>seleccione una canción</option>
+                <option value="Fanky" >Fanky</option>
+                <option value="Supersonic" >Supersonic</option>
+                <option value="Cyclone" >Cyclone</option>
             </select>
         </div>
     </div>
@@ -55,15 +56,15 @@
 <section>
     <div class="containermain">
         <div class="centersolo">
-            <div class="image-container">
+            <div class="image-container-cyclone" id="imgCyclone">
                 <img src="imagenes/cyclone.jpg" alt="album cyclone" width="100" height="100">
                 <a href="cancionA.html" class="button buttonoverimage">Cyclone</a>
             </div>
-            <div class="image-container">
+            <div class="image-container-fanky" id="imgFanky">
                 <img src="imagenes/fanky.jpeg" alt="album fanky" width="100" height="100">
                 <a href="cancionB.html" class="button buttonoverimage">Fanky</a>
             </div>
-            <div class="image-container">
+            <div class="image-container-supersonic" id="imgSupersonic">
                 <img src="imagenes/supersonic.jpg" alt="album supersonic" width="100" height="100">
                 <a href="cancionC.html" class="button buttonoverimage">Supersonic</a>
             </div>
