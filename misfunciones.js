@@ -6,19 +6,19 @@
 * */
 let Mostrarcancion = valor => {
     if (valor === "Fanky") {
-        document.getElementById("imgSupersonic").style.display = 'none'
-        document.getElementById("imgCyclone").style.display = 'none'
-        document.getElementById("imgFanky").style.display = 'block'
+        document.getElementById("imgSupersonic").style.display = 'none';
+        document.getElementById("imgCyclone").style.display = 'none';
+        document.getElementById("imgFanky").style.display = 'block';
     }
     if (valor === "Supersonic") {
-        document.getElementById("imgFanky").style.display = 'none'
-        document.getElementById("imgCyclone").style.display = 'none'
-        document.getElementById("imgSupersonic").style.display = 'block'
+        document.getElementById("imgFanky").style.display = 'none';
+        document.getElementById("imgCyclone").style.display = 'none';
+        document.getElementById("imgSupersonic").style.display = 'block';
     }
     if (valor === "Cyclone") {
-        document.getElementById("imgFanky").style.display = 'none'
-        document.getElementById("imgSupersonic").style.display = 'none'
-        document.getElementById("imgCyclone").style.display = 'block'
+        document.getElementById("imgFanky").style.display = 'none';
+        document.getElementById("imgSupersonic").style.display = 'none';
+        document.getElementById("imgCyclone").style.display = 'block';
     }
 
 }
@@ -32,21 +32,21 @@ let Mostrarcancion = valor => {
 
 let Mostrargenero = valor => {
     if (valor === "rock") {
-        document.getElementById("imgFanky").style.display = 'block'
-        document.getElementById("imgSupersonic").style.display = 'block'
-        document.getElementById("imgCyclone").style.display = 'none'
+        document.getElementById("imgFanky").style.display = 'block';
+        document.getElementById("imgSupersonic").style.display = 'block';
+        document.getElementById("imgCyclone").style.display = 'none';
     }
     if (valor === "pop") {
-        document.getElementById("imgFanky").style.display = 'none'
-        document.getElementById("imgSupersonic").style.display = 'none'
-        document.getElementById("imgCyclone").style.display = 'block'
+        document.getElementById("imgFanky").style.display = 'none';
+        document.getElementById("imgSupersonic").style.display = 'none';
+        document.getElementById("imgCyclone").style.display = 'block';
     }
     if (valor === "reggae") {
         alert('NINGUNA CANCIÓN DE ESTE GENERO')
-        document.getElementById("genero").value = "reggae"
-        document.getElementById("imgFanky").style.display = 'none'
-        document.getElementById("imgSupersonic").style.display = 'none'
-        document.getElementById("imgCyclone").style.display = 'none'
+        document.getElementById("genero").value = "reggae";
+        document.getElementById("imgFanky").style.display = 'none';
+        document.getElementById("imgSupersonic").style.display = 'none';
+        document.getElementById("imgCyclone").style.display = 'none';
     }
 }
 
@@ -61,22 +61,22 @@ let Mostrargenero = valor => {
 let Mostrarartista = valor => {
     valor = valor.toLowerCase() //Funcion que transforma la cadena de texto en minuscula
     if (valor === "charly" || valor === "charly garcia") {
-        document.getElementById("imgFanky").style.display = 'block'
-        document.getElementById("imgSupersonic").style.display = 'none'
-        document.getElementById("imgCyclone").style.display = 'none'
+        document.getElementById("imgFanky").style.display = 'block';
+        document.getElementById("imgSupersonic").style.display = 'none';
+        document.getElementById("imgCyclone").style.display = 'none';
     } else if (valor === "oasis") {
-        document.getElementById("imgFanky").style.display = 'none'
-        document.getElementById("imgSupersonic").style.display = 'block'
-        document.getElementById("imgCyclone").style.display = 'none'
+        document.getElementById("imgFanky").style.display = 'none';
+        document.getElementById("imgSupersonic").style.display = 'block';
+        document.getElementById("imgCyclone").style.display = 'none';
     } else if (valor === "sticky" || valor === "sticky fingers") {
-        document.getElementById("imgFanky").style.display = 'none'
-        document.getElementById("imgSupersonic").style.display = 'none'
-        document.getElementById("imgCyclone").style.display = 'block'
+        document.getElementById("imgFanky").style.display = 'none';
+        document.getElementById("imgSupersonic").style.display = 'none';
+        document.getElementById("imgCyclone").style.display = 'block';
     } else {
         alert('No existen valores coincidentes con esa busqueda')
-        document.getElementById("imgFanky").style.display = 'block'
-        document.getElementById("imgSupersonic").style.display = 'block'
-        document.getElementById("imgCyclone").style.display = 'block'
+        document.getElementById("imgFanky").style.display = 'block';
+        document.getElementById("imgSupersonic").style.display = 'block';
+        document.getElementById("imgCyclone").style.display = 'block';
     }
 
 
@@ -91,8 +91,11 @@ let Mostrarcanva = () => {
     const canva = document.getElementById("canvas");
     const ctx = canva.getContext("2d");
     const img = new Image();
+    img.onload = function () { //funcion anonima que genera la imagen por completo
+        const newWidth = canva.width; // le aplico a la imagen el mismo tamaño que el canva
+        const newHeight = canva.height;
+        ctx.drawImage(img, 0, 0, newWidth, newHeight);
+    };
+
     img.src = "imagenes/spinetta.jpg";
-    const newWidth = canva.width; //le aplico a la imagen el mismo tamaño que el canva
-    const newHeight = canva.height;
-    ctx.drawImage(img, 0, 0, newWidth, newHeight);
 }

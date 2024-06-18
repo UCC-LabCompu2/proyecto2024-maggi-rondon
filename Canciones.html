@@ -16,7 +16,7 @@
     <div class="containertitle">
         <img src="imagenes/icono.png" alt="logo guitarra" height="70%">
         <h1> El Flaco y la Viola</h1>
-        <canvas id="canvas"  class="canva" width="800px" height="100px"></canvas>
+        <canvas id="canvas" class="canva" width="800px" height="100px"></canvas>
     </div>
 </header>
 <div class="clear"></div>
@@ -41,21 +41,22 @@
             </select>
         </div>
         <label for="artista">artista</label>
-        <input type="text" id="artista" class="button buttonmenu" placeholder="buscar artista" maxlength="20" size="20" onchange="Mostrarartista(this.value)" >
+        <input type="text" id="artista" class="button buttonmenu" placeholder="buscar artista" maxlength="20" size="20"
+               onchange="Mostrarartista(this.value)">
         <div>
             <label for="cancion">canción</label>
             <select class="button buttonmenu" id="cancion" onchange="Mostrarcancion(this.value)">
                 <option value="" disabled selected>seleccione una canción</option>
-                <option value="Fanky" >Fanky</option>
-                <option value="Supersonic" >Supersonic</option>
-                <option value="Cyclone" >Cyclone</option>
+                <option value="Fanky">Fanky</option>
+                <option value="Supersonic">Supersonic</option>
+                <option value="Cyclone">Cyclone</option>
             </select>
         </div>
     </div>
 </aside>
 <section>
     <div class="containermain">
-        <div class="centersolo">
+        <div id="centersolo">
             <div class="image-container-cyclone" id="imgCyclone">
                 <img src="imagenes/cyclone.jpg" alt="album cyclone" width="100" height="100">
                 <a href="cancionA.html" class="button buttonoverimage">Cyclone</a>
