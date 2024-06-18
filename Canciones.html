@@ -11,12 +11,12 @@
     <link rel="icon" type="image/x-icon" href="imagenes/icono.png">
     <script type="text/javascript" src="misfunciones.js"></script>
 </head>
-<body>
+<body onload="Mostrarcanva()">
 <header>
     <div class="containertitle">
         <img src="imagenes/icono.png" alt="logo guitarra" height="70%">
         <h1> El Flaco y la Viola</h1>
-        <canvas id="canvas" width="300%" height="100"></canvas>
+        <canvas id="canvas"  class="canva" width="800px" height="100px"></canvas>
     </div>
 </header>
 <div class="clear"></div>
@@ -33,7 +33,7 @@
         </div>
         <div>
             <label for="genero">género</label>
-            <select class="button buttonmenu" id="genero" onchange="mostrargenero(this.value)">
+            <select class="button buttonmenu" id="genero" onchange="Mostrargenero(this.value)">
                 <option value="" disabled selected>seleccione un género</option>
                 <option value="rock">Rock</option>
                 <option value="pop">Pop</option>
@@ -41,10 +41,10 @@
             </select>
         </div>
         <label for="artista">artista</label>
-        <input type="text" id="artista" class="button buttonmenu" placeholder="buscar artista" maxlength="20" size="20" onchange="mostrarartista(this.value)" >
+        <input type="text" id="artista" class="button buttonmenu" placeholder="buscar artista" maxlength="20" size="20" onchange="Mostrarartista(this.value)" >
         <div>
             <label for="cancion">canción</label>
-            <select class="button buttonmenu" id="cancion" onchange="mostrarcancion(this.value)">
+            <select class="button buttonmenu" id="cancion" onchange="Mostrarcancion(this.value)">
                 <option value="" disabled selected>seleccione una canción</option>
                 <option value="Fanky" >Fanky</option>
                 <option value="Supersonic" >Supersonic</option>

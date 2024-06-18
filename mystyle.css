@@ -13,13 +13,12 @@ h1 {
     clear: both;
 }
 
-canvas {
+.canva {
     border: 1px solid black;
     margin-left: 50px;
     margin-right: 20px;
-    width: 50%;
-    height: 100%;
     display: flex;
+    background: white;
 
 }
 
@@ -132,8 +131,9 @@ img {
     height: 100px;
     float: left;
     margin: 50px;
-    display:block;
+    display: block;
 }
+
 .image-container-fanky {
     position: relative;
     width: 100px;
@@ -142,6 +142,7 @@ img {
     margin: 50px;
     display: block;
 }
+
 .image-container-supersonic {
     position: relative;
     width: 100px;
