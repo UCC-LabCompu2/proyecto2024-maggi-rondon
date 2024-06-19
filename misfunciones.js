@@ -97,5 +97,5 @@ let Mostrarcanva = () => {
         ctx.drawImage(img, 0, 0, newWidth, newHeight);
     };
 
-    img.src = "imagenes/spinetta.jpg";
+    img.src = "imagenes/guitarra.png";
 }
