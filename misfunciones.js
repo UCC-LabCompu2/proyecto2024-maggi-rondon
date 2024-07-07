@@ -1,8 +1,7 @@
-/*
+/**
 * funcion que muestra la imagen de la cancion seleccionada por el usuario en el select "canción"
 * @method Mostrarcancion
 * @param {string} valor - Almacena el valor seleccionado por el usuario
-* @return Ejecuta en el css, display: none o display: block, segun corresponda
 * */
 let Mostrarcancion = valor => {
     if (valor === "Fanky") {
@@ -22,11 +21,10 @@ let Mostrarcancion = valor => {
     }
 
 }
-/*
+/**
 * Funcion que muestra las imagenes de las canciones que corresponden con el género musical seleccionado por el usuario en el selector "genero"
 * @method Mostrargenero
 * @param {string} valor - Almacena el valor seleccionado por el usuario
-* @return Ejecuta en el css, display: none o display: block, segun corresponda
 * */
 
 
@@ -50,11 +48,10 @@ let Mostrargenero = valor => {
     }
 }
 
-/*
+/**
 * Funcion que muestra las imagenes de las canciones que corresponden con el artista buscado por el usuario en el intpu "artista"
 * @method Mostrarartista
 * @param {string} valor - Almacena el valor ingresado por el usuario
-* @return Ejecuta en el css, display: none o display: block, segun corresponda
 * */
 
 
@@ -77,11 +74,13 @@ let Mostrarartista = valor => {
         document.getElementById("imgFanky").style.display = 'block';
         document.getElementById("imgSupersonic").style.display = 'block';
         document.getElementById("imgCyclone").style.display = 'block';
+        document.getElementById("artista").value = '';
+
     }
 
 
 }
-/*
+/**
 * Esta funcion genera el canva
 * @method Mostrarcanva
 * */
