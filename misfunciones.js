@@ -98,3 +98,58 @@ let Mostrarcanva = () => {
 
     img.src = "imagenes/guitarra.png";
 }
+
+/**
+ * Esta funcion selecciona el acorde que pide mostrar el usuario
+ * @method Mostraracorde
+ * @param {string} valor - Almacena el valor seleccionado por el usuario
+ */
+
+let Mostraracorde = valor => {
+    const canva = document.getElementById("canvaacorde");
+    const ctx = canva.getContext("2d");
+    const img = new Image();
+    img.onload = function () { //funcion anonima que genera la imagen por completo
+        const newWidth = canva.width; // le aplico a la imagen el mismo tamaño que el canva
+        const newHeight = canva.height;
+        ctx.drawImage(img, 0, 0, newWidth, newHeight);
+    };
+    document.getElementById("Achord").style.display = 'none';
+    document.getElementById("Bchord").style.display = 'none';
+    document.getElementById("Cchord").style.display = 'none';
+    document.getElementById("Dchord").style.display = 'none';
+    document.getElementById("Echord").style.display = 'none';
+    document.getElementById("Fchord").style.display = 'none';
+    document.getElementById("Gchord").style.display = 'none';
+    if (valor === "A") {
+
+        img.src = "imagenes/Achord.png";
+        document.getElementById("canvaacorde").style.display = 'block';
+    } else if (valor === "B") {
+
+        img.src = "imagenes/Bchord.png";
+        document.getElementById("canvaacorde").style.display = 'block';
+    } else if (valor === "C" ) {
+
+        img.src = "imagenes/Cchord.png";
+        document.getElementById("canvaacorde").style.display = 'block';
+    } else if (valor === "D" ) {
+
+        img.src = "imagenes/Dchord.png";
+        document.getElementById("canvaacorde").style.display = 'block';
+    }else if (valor === "E" ) {
+
+        img.src = "imagenes/Echord.png";
+        document.getElementById("canvaacorde").style.display = 'block';
+    }else if (valor === "F" ) {
+
+        img.src = "imagenes/Fchord.png";
+        document.getElementById("canvaacorde").style.display = 'block';
+    }else if (valor === "G" ) {
+
+        img.src = "imagenes/Gchord.png";
+        document.getElementById("canvaacorde").style.display = 'block';
+    }
+
+
+}

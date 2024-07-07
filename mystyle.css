@@ -20,6 +20,11 @@ h1 {
     background: white;
 
 }
+.canvaacordes {
+    display: none;
+    background: white;
+
+}
 
 .containertitle {
     width: 100vw;
@@ -48,6 +53,7 @@ h1 {
     padding: 4%;
     margin: 50px 50px;
     font-size: 16px;
+    position: relative;
 }
 
 .buttonchords:hover {
