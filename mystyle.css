@@ -21,11 +21,48 @@ h1 {
 
 }
 
+#canva_animado1 {
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    margin-right: 50px;
+    display: flex;
+    background: white;
+    text-align: right;
+    margin-top: 100px;
+}
+
+#canva_animado2 {
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    margin-right: 50px;
+    display: flex;
+    background: white;
+    text-align: right;
+    margin-top: 100px;
+}
+
+#canva_animado3 {
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    margin-right: 50px;
+    display: flex;
+    background: white;
+    text-align: right;
+    margin-top: 100px;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .containertitle {
     width: 100vw;
     height: 13vh;
     display: flex;
     justify-content: left;
+    position: relative;
 
 }
 
@@ -68,10 +105,9 @@ h1 {
 }
 
 #centersolo {
-    margin: 0;
-    position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
+    position: absolute;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -194,4 +230,17 @@ img {
 
 pre {
     font-family: 'QuickSand', sans-serif;
+}
+
+.canvaacordes {
+    display: none;
+    background: white;
+}
+
+#centercancion {
+    margin-top: 25%;
+    margin-left: 50%;
+    position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
