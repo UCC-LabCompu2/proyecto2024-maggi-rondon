@@ -21,7 +21,7 @@ h1 {
 
 }
 
-#canva_animado1 {
+#canva_animado {
     border: 1px solid #ccc;
     margin-left: 20px;
     margin-right: 50px;
@@ -40,17 +40,6 @@ h1 {
     text-align: right;
     margin-top: 100px;
 }
-
-#canva_animado3 {
-    border: 1px solid #ccc;
-    margin-left: 20px;
-    margin-right: 50px;
-    display: flex;
-    background: white;
-    text-align: right;
-    margin-top: 100px;
-}
-
 section {
     display: flex;
     justify-content: space-between;

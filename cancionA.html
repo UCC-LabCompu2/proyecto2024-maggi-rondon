@@ -10,7 +10,8 @@
     <link rel="icon" type="image/x-icon" href="imagenes/icono.png">
     <script type="text/javascript" src="misfunciones.js"></script>
 </head>
-<body onload="setInterval(Canvaanimado1,1500)">
+<body onload="setInterval(() => Canvaanimado('canva_animado'), 1500)">
+<!-- ESTO DE ARRIBA ES PARA PASAR COMO PARAMETRO EL CANVAANIMADO JR-->
 <header>
     <div class="containertitle">
         <img src="imagenes/icono.png" alt="logo guitarra" height="70%">
@@ -156,7 +157,7 @@
                 </pre>
         </div>
     </div>
-    <canvas id="canva_animado1" width="370px" height="100px"></canvas>
+    <canvas id="canva_animado" width="370px" height="100px"></canvas>
 </section>
 </body>
 </html>

@@ -41,7 +41,7 @@ let Mostrargenero = valor => {
     }
     if (valor === "reggae") {
         alert('NINGUNA CANCIÓN DE ESTE GENERO')
-        document.getElementById("genero").value = "reggae";
+        document.getElementById("genero").value = "";
         document.getElementById("imgFanky").style.display = 'none';
         document.getElementById("imgSupersonic").style.display = 'none';
         document.getElementById("imgCyclone").style.display = 'none';
@@ -109,85 +109,49 @@ let Mostraracorde = valor => {
     const canva = document.getElementById("canvaacorde");
     const ctx = canva.getContext("2d");
     const img = new Image();
-    img.onload = function () { //funcion anonima que genera la imagen por completo
-        const newWidth = canva.width; // le aplico a la imagen el mismo tamaño que el canva
+    //YA NO SE MUESTRA MAS CON .STYLE
+
+    if (valor === "A") {
+        img.src = "imagenes/Achord.png";
+    }  else if (valor === "C") {
+        img.src = "imagenes/Cchord.png";
+    } else if (valor === "D") {
+        img.src = "imagenes/Dchord.png";
+    } else if (valor === "E") {
+        img.src = "imagenes/Echord.png";
+    } else if (valor === "F") {
+        img.src = "imagenes/Fchord.png";
+    } else if (valor === "G") {
+        img.src = "imagenes/Gchord.png";
+    }
+    canva.width = canva.width;
+    img.onload = function () {
+        const newWidth = canva.width;
         const newHeight = canva.height;
         ctx.drawImage(img, 0, 0, newWidth, newHeight);
     };
-    document.getElementById("Achord").style.display = 'none';
-    document.getElementById("Bchord").style.display = 'none';
-    document.getElementById("Cchord").style.display = 'none';
-    document.getElementById("Dchord").style.display = 'none';
-    document.getElementById("Echord").style.display = 'none';
-    document.getElementById("Fchord").style.display = 'none';
-    document.getElementById("Gchord").style.display = 'none';
-    if (valor === "A") {
-
-        img.src = "imagenes/Achord.png";
-        document.getElementById("canvaacorde").style.display = 'block';
-    } else if (valor === "B") {
-
-        img.src = "imagenes/Bchord.png";
-        document.getElementById("canvaacorde").style.display = 'block';
-    } else if (valor === "C") {
-
-        img.src = "imagenes/Cchord.png";
-        document.getElementById("canvaacorde").style.display = 'block';
-    } else if (valor === "D") {
-
-        img.src = "imagenes/Dchord.png";
-        document.getElementById("canvaacorde").style.display = 'block';
-    } else if (valor === "E") {
-
-        img.src = "imagenes/Echord.png";
-        document.getElementById("canvaacorde").style.display = 'block';
-    } else if (valor === "F") {
-
-        img.src = "imagenes/Fchord.png";
-        document.getElementById("canvaacorde").style.display = 'block';
-    } else if (valor === "G") {
-
-        img.src = "imagenes/Gchord.png";
-        document.getElementById("canvaacorde").style.display = 'block';
-    }
-
-
+    alert("se muestra el acorde:" +valor);
 }
 
 /**
- * Esta funcion muestra el canva animado para la cancion Cyclone
- * @method Canvaanimado1
+ * Esta funcion muestra el canva animado para las canciones
+ * @method Canvaanimado
  */
 
 
 x = 0;
 dx = 100;
 
-let Canvaanimado1 = () => {
-    const canva = document.getElementById("canva_animado1")
+let Canvaanimado = (canvasID) => {
+    const canva = document.getElementById(canvasID)
     const ctx = canva.getContext("2d");
     const img = new Image();
     canva.width = canva.width;
-    img.src = "imagenes/flecha1.png";
-    img.onload = function () { //funcion anonima que genera la imagen por completo
-        ctx.drawImage(img, x, 0, canva.width / 5, canva.height);
-    };
-    x += dx;
-    if (x > canva.width) {
-        x = 0;
+    if (canvasID==='canva_animado'){
+        img.src = "imagenes/flecha1.png";
+    }else if (canvasID==='canva_animado2'){
+        img.src = "imagenes/flecha2.png";
     }
-}
-/**
- * Esta funcion muestra el canva animado para la cancion Fanky
- * @method Canvaanimado2
- */
-
-let Canvaanimado2 = () => {
-    const canva = document.getElementById("canva_animado2")
-    const ctx = canva.getContext("2d");
-    const img = new Image();
-    canva.width = canva.width;
-    img.src = "imagenes/flecha2.png";
     img.onload = function () { //funcion anonima que genera la imagen por completo
         ctx.drawImage(img, x, 0, canva.width / 5, canva.height);
     };
@@ -197,22 +161,3 @@ let Canvaanimado2 = () => {
     }
 }
 
-/**
- * Esta funcion muestra el canva animado para la cancion Supersonic
- * @method Canvaanimado3
- */
-
-let Canvaanimado3 = () => {
-    const canva = document.getElementById("canva_animado3")
-    const ctx = canva.getContext("2d");
-    const img = new Image();
-    canva.width = canva.width;
-    img.src = "imagenes/flecha1.png";
-    img.onload = function () { //funcion anonima que genera la imagen por completo
-        ctx.drawImage(img, x, 0, canva.width / 5, canva.height);
-    };
-    x += dx;
-    if (x > canva.width) {
-        x = 0;
-    }
-}
