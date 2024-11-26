@@ -4,6 +4,8 @@
  * @param {string} valor - Almacena el valor seleccionado por el usuario
  * */
 let Mostrarcancion = valor => {
+    document.getElementById("genero").value = "";//ELIMINA LO ESCRITO EN GENERO
+    document.getElementById("artista").value = ''; //ELIMINA LO DE ARTISTA
     if (valor === "Fanky") {
         document.getElementById("imgSupersonic").style.display = 'none';
         document.getElementById("imgCyclone").style.display = 'none';
@@ -29,17 +31,21 @@ let Mostrarcancion = valor => {
 
 
 let Mostrargenero = valor => {
+    document.getElementById("artista").value = ''; //ELIMINA LO DE ARTISTA
+    document.getElementById("cancion").value="";//ELIMINA LO DE CANCION
     if (valor === "rock") {
         document.getElementById("imgFanky").style.display = 'block';
         document.getElementById("imgSupersonic").style.display = 'block';
         document.getElementById("imgCyclone").style.display = 'none';
     }
-    if (valor === "pop") {
+    if (valor === "reggae") {
+        document.getElementById("artista").value="";//CON ESTO LIMPIO LAS OTRAS BUSQUEDAS
         document.getElementById("imgFanky").style.display = 'none';
         document.getElementById("imgSupersonic").style.display = 'none';
         document.getElementById("imgCyclone").style.display = 'block';
     }
-    if (valor === "reggae") {
+    if (valor === "pop") {
+        document.getElementById("artista").value="";//CON ESTO LIMPIO LAS OTRAS BUSQUEDAS
         alert('NINGUNA CANCIÓN DE ESTE GENERO')
         document.getElementById("genero").value = "";
         document.getElementById("imgFanky").style.display = 'none';
@@ -57,6 +63,8 @@ let Mostrargenero = valor => {
 
 let Mostrarartista = valor => {
     valor = valor.toLowerCase() //Funcion que transforma la cadena de texto en minuscula
+    document.getElementById("cancion").value="";//ELIMINA LO DE CANCION
+    document.getElementById("genero").value = "";//ELIMINA LO DE GENERO
     if (valor === "charly" || valor === "charly garcia") {
         document.getElementById("imgFanky").style.display = 'block';
         document.getElementById("imgSupersonic").style.display = 'none';
@@ -70,7 +78,7 @@ let Mostrarartista = valor => {
         document.getElementById("imgSupersonic").style.display = 'none';
         document.getElementById("imgCyclone").style.display = 'block';
     } else {
-        alert('No existen valores coincidentes con esa busqueda')
+        alert('No existen valores coincidentes con esa búsqueda')
         document.getElementById("imgFanky").style.display = 'block';
         document.getElementById("imgSupersonic").style.display = 'block';
         document.getElementById("imgCyclone").style.display = 'block';
@@ -130,26 +138,26 @@ let Mostraracorde = valor => {
         const newHeight = canva.height;
         ctx.drawImage(img, 0, 0, newWidth, newHeight);
     };
-    alert("se muestra el acorde:" +valor);
 }
 
 /**
  * Esta funcion muestra el canva animado para las canciones
  * @method Canvaanimado
+ * @param {string} valor - Almacena el ID del canva que se utiliza de acuerdo a la cancion
  */
 
 
 x = 0;
 dx = 100;
 
-let Canvaanimado = (canvasID) => {
-    const canva = document.getElementById(canvasID)
+let Canvaanimado = (valor) => {
+    const canva = document.getElementById(valor)
     const ctx = canva.getContext("2d");
     const img = new Image();
     canva.width = canva.width;
-    if (canvasID==='canva_animado'){
+    if (valor==='canva_animado'){
         img.src = "imagenes/flecha1.png";
-    }else if (canvasID==='canva_animado2'){
+    }else if (valor==='canva_animado2'){
         img.src = "imagenes/flecha2.png";
     }
     img.onload = function () { //funcion anonima que genera la imagen por completo
